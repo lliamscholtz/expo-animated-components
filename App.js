@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import FlatlistScreen from './src/screens/Flatlist';
 import PerspectiveButtonScreen from './src/screens/PerspectiveButton';
+import BlurredCarouselScreen from './src/screens/BlurredCarousel';
 
 function LibraryScreen({ navigation }) {
     return (
@@ -23,6 +24,10 @@ function LibraryScreen({ navigation }) {
             <Button
                 title="Perspective Button"
                 onPress={() => navigation.navigate('PerspectiveButton')}
+            />
+            <Button
+                title="Blurred Carousel"
+                onPress={() => navigation.navigate('BlurredCarousel')}
             />
         </View>
     );
@@ -43,6 +48,11 @@ export default function App() {
                 <Stack.Screen
                     name="PerspectiveButton"
                     component={PerspectiveButtonScreen}
+                    options={{ headerShown: false }}
+                />
+                <Stack.Screen
+                    name="BlurredCarousel"
+                    component={BlurredCarouselScreen}
                     options={{ headerShown: false }}
                 />
             </Stack.Navigator>
