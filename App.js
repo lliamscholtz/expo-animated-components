@@ -4,13 +4,25 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import FlatlistScreen from './src/screens/Flatlist';
+import PerspectiveButtonScreen from './src/screens/PerspectiveButton';
 
 function LibraryScreen({ navigation }) {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <View
+            style={{
+                flex: 1,
+                alignItems: 'center',
+                justifyContent: 'flex-start',
+                marginTop: 30,
+            }}
+        >
             <Button
-                title="Flatlist - Scroll Effect"
+                title="Flatlist ScrollY Effect"
                 onPress={() => navigation.navigate('Flatlist')}
+            />
+            <Button
+                title="Perspective Button"
+                onPress={() => navigation.navigate('PerspectiveButton')}
             />
         </View>
     );
@@ -26,6 +38,11 @@ export default function App() {
                 <Stack.Screen
                     name="Flatlist"
                     component={FlatlistScreen}
+                    options={{ headerShown: false }}
+                />
+                <Stack.Screen
+                    name="PerspectiveButton"
+                    component={PerspectiveButtonScreen}
                     options={{ headerShown: false }}
                 />
             </Stack.Navigator>

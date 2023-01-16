@@ -1,7 +1,9 @@
+// Tutorial: https://www.youtube.com/watch?v=vQNg06Hf0MQ
+// Credit: Catalin Miron
+
 // Inspiration: https://dribbble.com/shots/14154226-Rolodex-Scrolling-Animation/attachments/5780833?mode=media
 // Photo by Sharefaith from Pexels
 // Background image: https://www.pexels.com/photo/pink-rose-closeup-photography-1231265/
-// Tutorial: https://www.youtube.com/watch?v=F8x-dyIsrJ8
 
 import * as React from 'react';
 import { StatusBar, Image, Animated, Text, View, StyleSheet } from 'react-native';
